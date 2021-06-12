@@ -13,7 +13,8 @@ const DataBaseHome = mongoose.Schema({
         type: String
     },
     imagenPublicada:{
-        type: String
+        type: mongoose.Schema.Types.String,
+        ref: 'usuario'
     },
     creador:{
         type: mongoose.Schema.Types.ObjectId,

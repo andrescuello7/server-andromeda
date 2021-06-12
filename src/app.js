@@ -28,6 +28,7 @@ app.use(express.json());
 //Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/usuario", require("./routes/usuarios"));
+app.use("/api/consulta", require("./routes/consult"));
 app.use("/api/publicacion", require("./routes/publicacion"));
 
 //Server
