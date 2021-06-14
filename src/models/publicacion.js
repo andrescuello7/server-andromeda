@@ -12,9 +12,8 @@ const DataBaseHome = mongoose.Schema({
     perfil:{
         type: String
     },
-    imagenPublicada:{
-        type: mongoose.Schema.Types.String,
-        ref: 'usuario'
+    flyer:{
+        type: String
     },
     creador:{
         type: mongoose.Schema.Types.ObjectId,

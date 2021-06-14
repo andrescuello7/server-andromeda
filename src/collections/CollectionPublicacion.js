@@ -21,7 +21,6 @@ exports.Post = async (req, res) => {
             titulo,
             contenido,
             creador: req.usuario.id,
-            imagenPublicada: req.usuario.imagenPublicada,
             CreateAdd: Date.now()
         })
         await DataBaseOfHome.save()
