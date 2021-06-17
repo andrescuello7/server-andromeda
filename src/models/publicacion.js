@@ -1,19 +1,19 @@
 const mongoose = require('mongoose')
 
 const DataBaseHome = mongoose.Schema({
-    titulo:{
-        type: String,
-        required: true
-    },
     contenido:{
         type: String,
         required: true
+    },
+    provincia:{
+        type: String
     },
     perfil:{
         type: String
     },
     flyer:{
-        type: String
+        type: String,
+        required: true
     },
     creador:{
         type: mongoose.Schema.Types.ObjectId,

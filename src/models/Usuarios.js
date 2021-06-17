@@ -16,7 +16,16 @@ const Usuario = mongoose.Schema({
         required: true,
         tim: true
     },
+    provincia:{
+        type: String
+    },
+    youtube:{
+        type: String
+    },
     facebook:{
+        type: String
+    },
+    instagram:{
         type: String
     },
     celular:{
