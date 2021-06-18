@@ -38,9 +38,6 @@ exports.Post = async (req, res) => {
     jwt.sign(
       payload,
       process.env.SECRETA,
-      {
-        expiresIn: 3600,
-      },
       (error, token) => {
         if (error) {
           throw error;
