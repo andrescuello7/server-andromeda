@@ -37,6 +37,9 @@ const Usuario = mongoose.Schema({
     imagen:{
         type: String
     },
+    fondo:{
+        type: String
+    },
     CreateAdd:{
         type: Date,
         default: Date.now()
