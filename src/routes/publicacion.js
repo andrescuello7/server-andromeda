@@ -14,4 +14,8 @@ router.post('/', auth, CollectionPublicacion.Post)
 //Metodos Delete
 router.delete('/:idDelete', auth, CollectionPublicacion.Delete)
 
+//Metodos Put
+router.put('/inclike/:idLike', auth, CollectionPublicacion.PonerLikes)
+router.put('/quitlike/:idLike', auth, CollectionPublicacion.QuitarLikes)
+
 module.exports = router;
