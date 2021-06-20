@@ -23,6 +23,12 @@ const DataBaseHome = mongoose.Schema({
         type: mongoose.Schema.Types.String,
         ref: 'usuario'
     },
+    comentarios: [{
+        comentario: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'pack'
+        } 
+    }],
     CreateAdd:{
         type: Date,
         default: Date.now()
