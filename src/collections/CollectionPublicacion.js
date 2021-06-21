@@ -33,13 +33,28 @@ exports.Post = async (req, res) => {
 };
 
 //Put comentarios
+exports.PonerCometarios = async (req, res) => {
+  const { idComentario } = req.params;
+  const { comentarios } = req.body;
+  try {
+    const final = await ModelPublic.findByIdAndUpdate(
+      { _id: idComentario },
+      { $push: { comentarios } },
+      { new: true }
+    );
+    res.send(final);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 exports.PonerLikes = async (req, res) => {
   const { idLike } = req.params;
   const { likes } = req.body;
   try {
     const final = await ModelPublic.findByIdAndUpdate(
       { _id: idLike },
-      {$inc: { likes: 1 }},
+      { $inc: { likes: 1 } },
       { new: true }
     );
     res.send(final);
@@ -54,7 +69,7 @@ exports.QuitarLikes = async (req, res) => {
   try {
     const final = await ModelPublic.findByIdAndUpdate(
       { _id: idLike },
-      {$inc: { likes: -1 }},
+      { $inc: { likes: -1 } },
       { new: true }
     );
     res.send(final);

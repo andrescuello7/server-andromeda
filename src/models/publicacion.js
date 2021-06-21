@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const DataBaseHome = mongoose.Schema({
+  likes: { type: Number },
   contenido: {
     type: String,
     required: true,
@@ -23,7 +24,10 @@ const DataBaseHome = mongoose.Schema({
     type: mongoose.Schema.Types.String,
     ref: "usuario",
   },
-  likes:{ type: Number },
+  comentarios: {
+    usuario: String,
+    contenido: String,
+  },
   CreateAdd: {
     type: Date,
     default: Date.now(),
